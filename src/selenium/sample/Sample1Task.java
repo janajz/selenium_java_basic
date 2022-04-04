@@ -15,8 +15,18 @@ public class Sample1Task {
 //        TODO:
 //         define driver
 //         go to https://kristinek.github.io/site/index2.html
+
 //         get title of page
 //         get URL of current page
 //         close browser
+
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\JanaJermakova\\selenium_java_basic\\lib\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://kristinek.github.io/site/index2.html");
+        System.out.print("Title " + driver.getTitle());
+        System.out.println("URL: " + driver.getCurrentUrl());
+        Thread.sleep( 5000);
+        driver.quit();
+
     }
 }
